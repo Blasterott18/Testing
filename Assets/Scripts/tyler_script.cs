@@ -5,11 +5,9 @@ using UnityEngine;
 public class tyler_script : MonoBehaviour {
 
 	public float speed;
-	Transform player;
 
 	// Use this for initialization
 	void Start () {
-		player = transform;
 	}
 	
 	// Update is called once per frame
