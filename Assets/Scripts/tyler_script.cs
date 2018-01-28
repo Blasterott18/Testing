@@ -5,9 +5,11 @@ using UnityEngine;
 public class tyler_script : MonoBehaviour {
 
 	public float speed;
+	public Rigidbody2D rigid;
 
 	// Use this for initialization
 	void Start () {
+		rigid = GetComponent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
@@ -25,6 +27,10 @@ public class tyler_script : MonoBehaviour {
 			transform.Translate (0, -1 * speed * Time.deltaTime, 0);
 		}
 		*/
+		if (Input.GetKey (KeyCode.Space)) {
+			rigid.AddForce (transform.up * speed);
+		}
+
 		if (Input.GetKey (KeyCode.A)) {
 			transform.Translate (-1 * speed * Time.deltaTime, 0, 0);
 		}
