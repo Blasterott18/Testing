@@ -11,11 +11,11 @@ public class moveRight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		movement ();
+		Movement ();
 		
 	}
 
-	void movement (){
+	void Movement (){
 		transform.Translate (10 * Time.deltaTime, 0, 0);
 	}
 }
