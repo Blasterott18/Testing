@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class tyler_script : MonoBehaviour {
 
+	public float jumpSpeed;
 	public float speed;
 	public Rigidbody2D rigid;
 
@@ -27,8 +28,8 @@ public class tyler_script : MonoBehaviour {
 			transform.Translate (0, -1 * speed * Time.deltaTime, 0);
 		}
 		*/
-		if (Input.GetKey (KeyCode.Space)) {
-			rigid.AddForce (transform.up * speed);
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			rigid.AddForce (transform.up * jumpSpeed, ForceMode2D.Impulse);
 		}
 
 		if (Input.GetKey (KeyCode.A)) {
